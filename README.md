@@ -1,9 +1,10 @@
-# Lightstreamer - Stock-List Demo - Android Client
+# Lightstreamer - Stock-List Demo - Android Kotlin Client
 
 
-This project contains a full example of an Android application that employs the [Lightstreamer Android Client library](http://docs.lightstreamer.com/api/ls-android-client/latest/) to subscribe to real-time updates.
+This project contains a full example of an Android application (Kotlin version) that employs the [Lightstreamer Android Client library](http://docs.lightstreamer.com/api/ls-android-client/latest/) to subscribe to real-time updates.
+An equivalent version based on Java instead of Kotlin is [available](https://github.com/Lightstreamer/Lightstreamer-example-AdvStockList-client-android) as well.
 
-An extended version, including support for GCM push notifications is also available: [Stock-List Demo with GCM Push Notifications - Android Client](https://github.com/Lightstreamer/Lightstreamer-example-MPNStockList-client-android)
+An extended version, including support for GCM push notifications (Java version) is also available: [Stock-List Demo with GCM Push Notifications - Android Client](https://github.com/Lightstreamer/Lightstreamer-example-MPNStockList-client-android)
 
 
 ## Live Demo
@@ -20,22 +21,22 @@ An extended version, including support for GCM push notifications is also availa
 
 ## Details
 
-This is a Java-for-Android version of the [Lightstreamer - Basic Stock-List Demo - HTML client](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-javascript#basic-stock-list-demo---html-client).<br>
+This is a Kotlin-for-Android version of the [Lightstreamer - Basic Stock-List Demo - HTML client](https://github.com/Lightstreamer/Lightstreamer-example-StockList-client-javascript#basic-stock-list-demo---html-client).<br>
 This app uses the <b>Android Client API for Lightstreamer</b> to handle the communications with Lightstreamer Server. A simple user interface is implemented to display the real-time data received from Lightstreamer Server.<br>
 
 Touch a row opens a new panel with the detailed information, updated in real-time, of the stock.
 
 ### Dig the Code
 
-* `StockListDemoApplication.java` is the class representing the application itself. It creates and manage the LightstreamerClient instance
+* `StockListDemoApplication.kt` is the class representing the application itself. It creates and manage the LightstreamerClient instance
 that is shared by the other classes. A proxy to such instance is exposed as a singleton to the entire application.
-* `StockListDemo.java` is the entry point and only `Activity` of the application. It contains two `Fragment`s, the manu bar for
+* `StockListDemo.kt` is the entry point and only `Activity` of the application. It contains two `Fragment`s, the manu bar for
 the app and listens to LightstreamerClient status events to show the connection status to the user. The two `Fragment` are both visible 
 if the application runs on tablet; on the contrary, only one `Fragment` is visible and are exchanged based on the user interaction
-* `SubscriptionFragment.java` represents a `Fragment` containing a subscription that is started/stopped based on the lifecycle of 
+* `SubscriptionFragment.kt` represents a `Fragment` containing a subscription that is started/stopped based on the lifecycle of
 the `Fragment`. Please note that this class does not actually extend `Fragment`.
-* `StocksFragment.java` and `DetailsFragment.java` are the classes representing the two fragments of the application. 
-* `Chart.java` wraps the AndroidPlot APIs to plot the real-time chart on the details fragment.
+* `StocksFragment.kt` and `DetailsFragment.kt` are the classes representing the two fragments of the application.
+* `Chart.kt` wraps the AndroidPlot APIs to plot the real-time chart on the details fragment.
 
 
 Check out the sources for further explanations.
@@ -51,7 +52,7 @@ an [Android Virtual Device](http://developer.android.com/tools/devices/emulator.
 has to be deployed on your local Lightstreamer Server instance. Please check out that project and follow the installation 
 instructions provided with it. 
 * Launch Lightstreamer Server.
-* Download the `deploy.zip` file, which you can find in the [deploy release](https://github.com/Lightstreamer/Lightstreamer-example-AdvStockList-client-android/releases) 
+* Download the `deploy.zip` file, which you can find in the [deploy release](https://github.com/Lightstreamer/Lightstreamer-example-AdvStockList-client-android-kotlin/releases) 
 of this project and extract the `Android_StockListDemo.apk` file.
 * Locate or install the [Android SDK](http://developer.android.com/sdk/index.html)
 * Install the `Android_StockListDemo.apk` in your emulator:
@@ -71,7 +72,7 @@ of this project and extract the `Android_StockListDemo.apk` file.
 
 Note that you can skip this section and build the application without using any IDE. 
 
-To open the project in [Android Studio](https://developer.android.com/sdk/installing/studio.html), import the provided Gradle project.
+To open the project in [Android Studio](https://developer.android.com/sdk/installing/studio.html), install Kotlin plugin (if missing), import the provided Gradle project.
 
 ### Deploy
   
@@ -99,6 +100,7 @@ You might also use a different build tool (e.g.: Maven, Ant, etc.) by converting
 ### Related Projects
 
 * [Lightstreamer - Stock-List Demos - HTML Clients](https://github.com/Lightstreamer/Lightstreamer-example-Stocklist-client-javascript)
+* [Lightstreamer - Stock-List Demo - Android Java Client](https://github.com/Lightstreamer/Lightstreamer-example-AdvStockList-client-android)
 * [Lightstreamer - Stock-List Demo with GCM Push Notifications - Android Client](https://github.com/Lightstreamer/Lightstreamer-example-MPNStockList-client-android)
 
 ## Lightstreamer Compatibility Notes
@@ -107,4 +109,3 @@ You might also use a different build tool (e.g.: Maven, Ant, etc.) by converting
 * For Lightstreamer Allegro (+ Android Client API support), Presto, Vivace.
 * For a version of this example compatible with Lightstreamer Android Client API version 2, please refer to [this tag](https://github.com/Lightstreamer/Lightstreamer-example-AdvStockList-client-android/tree/latest-for-client-2).
 * For a version of this example compatible with Lightstreamer Android Client API version 1.1, please refer to [this tag](https://github.com/Lightstreamer/Lightstreamer-example-AdvStockList-client-android/tree/latest-for-client-1.x).
-
