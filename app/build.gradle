@@ -2,13 +2,13 @@ apply plugin: 'com.android.application'
 apply plugin: 'kotlin-android'
 
 android {
-    compileSdkVersion 22
+    compileSdkVersion 29
     buildToolsVersion '25.0.0'
 
     defaultConfig {
         applicationId "com.lightstreamer.simple_demo.android"
-        minSdkVersion 10
-        targetSdkVersion 22
+        minSdkVersion 23
+        targetSdkVersion 29
         versionCode 12
         versionName "2.1.0"
     }
@@ -41,10 +41,9 @@ dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     compile 'com.android.support:appcompat-v7:22.2.0'
     compile 'com.androidplot:androidplot-core:0.6.1'
-    compile 'com.lightstreamer:ls-android-client:3.1.3'
+    compile 'com.lightstreamer:ls-android-client:4.2.2'
 }
 
 repositories {
     mavenCentral()
-    maven { url "http://www.lightstreamer.com/repo/maven" }
 }
