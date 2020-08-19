@@ -61,20 +61,20 @@ class DetailsFragment : Fragment() {
         val view = inflater.inflate(R.layout.details_view, container, false)
 
         with(holder) {
-            put("stock_name", view.findViewById(R.id.d_stock_name) as TextView)
-            put("last_price", view.findViewById(R.id.d_last_price) as TextView)
-            put("timestamp", view.findViewById(R.id.d_time) as TextView)
-            put("pct_change", view.findViewById(R.id.d_pct_change) as TextView)
-            put("bid_quantity", view.findViewById(R.id.d_bid_quantity) as TextView)
-            put("bid", view.findViewById(R.id.d_bid) as TextView)
-            put("ask", view.findViewById(R.id.d_ask) as TextView)
-            put("ask_quantity", view.findViewById(R.id.d_ask_quantity) as TextView)
-            put("min", view.findViewById(R.id.d_min) as TextView)
-            put("max", view.findViewById(R.id.d_max) as TextView)
-            put("open_price", view.findViewById(R.id.d_open_price) as TextView)
+            put("stock_name", view.findViewById<TextView>(R.id.d_stock_name) as TextView)
+            put("last_price", view.findViewById<TextView>(R.id.d_last_price) as TextView)
+            put("timestamp", view.findViewById<TextView>(R.id.d_time) as TextView)
+            put("pct_change", view.findViewById<TextView>(R.id.d_pct_change) as TextView)
+            put("bid_quantity", view.findViewById<TextView>(R.id.d_bid_quantity) as TextView)
+            put("bid", view.findViewById<TextView>(R.id.d_bid) as TextView)
+            put("ask", view.findViewById<TextView>(R.id.d_ask) as TextView)
+            put("ask_quantity", view.findViewById<TextView>(R.id.d_ask_quantity) as TextView)
+            put("min", view.findViewById<TextView>(R.id.d_min) as TextView)
+            put("max", view.findViewById<TextView>(R.id.d_max) as TextView)
+            put("open_price", view.findViewById<TextView>(R.id.d_open_price) as TextView)
         }
 
-        val plot = view.findViewById(R.id.mySimpleXYPlot) as XYPlot
+        val plot = view.findViewById<TextView>(R.id.mySimpleXYPlot) as XYPlot
         chart = Chart(plot, handler)
 
         stockListener = Stock(numericFields, subscriptionFields, handler, holder)

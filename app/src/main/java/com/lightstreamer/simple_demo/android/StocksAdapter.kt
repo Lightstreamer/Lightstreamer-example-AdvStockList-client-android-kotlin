@@ -33,9 +33,9 @@ class StocksAdapter(private val activity: Activity, layout: Int, list: List<Stoc
             row = inflater.inflate(R.layout.row_layout, parent, false)!!
 
             holder = RowHolder(
-                    row.findViewById(R.id.stock_name) as TextView,
-                    row.findViewById(R.id.last_price) as TextView,
-                    row.findViewById(R.id.time) as TextView
+                    row.findViewById<TextView>(R.id.stock_name) as TextView,
+                    row.findViewById<TextView>(R.id.last_price) as TextView,
+                    row.findViewById<TextView>(R.id.time) as TextView
             )
 
             row.tag = holder
@@ -45,7 +45,7 @@ class StocksAdapter(private val activity: Activity, layout: Int, list: List<Stoc
         }
 
         val stock = getItem(position)
-        stock.fill(holder)
+        stock?.fill(holder)
 
         return row
     }
