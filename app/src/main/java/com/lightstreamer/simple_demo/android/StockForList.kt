@@ -69,7 +69,7 @@ class StockForList(private val pos: Int) {
         }
 
         this.turningOff = TurnOffRunnable(context)
-        context.handler.postDelayed(this.turningOff, 600)
+        context.handler.postDelayed(this.turningOff!!, 600)
     }
 
     fun clean() {

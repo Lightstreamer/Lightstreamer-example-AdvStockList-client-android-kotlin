@@ -70,7 +70,7 @@ class Chart(private val dynamicPlot: XYPlot, private val handler: Handler) : Sub
         this.dynamicPlot.removeSeries(series)
     }
 
-    override fun onListenStart(subscription: Subscription) {
+    override fun onListenStart() {
         this.clean()
     }
 

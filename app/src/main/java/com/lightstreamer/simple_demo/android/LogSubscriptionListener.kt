@@ -35,11 +35,11 @@ object LogSubscriptionListener : SubscriptionListener {
         Log.v(tag, "Update for ${update.itemName}")
     }
 
-    override fun onListenEnd(subscription: Subscription) {
+    override fun onListenEnd() {
         Log.d(tag, "Start listening")
     }
 
-    override fun onListenStart(subscription: Subscription) {
+    override fun onListenStart() {
         Log.d(tag, "Stop listening")
     }
 

@@ -32,15 +32,17 @@ class Stock(internal var numericField: Set<String>,
     private val dateFormat = SimpleDateFormat("HH:mm:ss")
 
     private val turnOffRunnables = HashMap<String, UpdateRunnable>()
-    private var subscription: Subscription? = null
+    @Volatile private var subscription: Subscription? = null
 
-    override fun onListenStart(subscription: Subscription) {
-        this.subscription = subscription
+    fun setSubscription(sub: Subscription) {
+        this.subscription = sub
+    }
 
+    override fun onListenStart() {
         handler.post(ResetRunnable())
     }
 
-    override fun onListenEnd(subscription: Subscription) {
+    override fun onListenEnd() {
         this.subscription = null
     }
 

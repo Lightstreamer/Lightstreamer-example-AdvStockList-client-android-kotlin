@@ -188,10 +188,9 @@ class StockListDemo : AppCompatActivity(), StocksFragment.onStockSelectedListene
 
     inner class LSClientListener : ClientListener {
 
-        override fun onListenEnd(arg0: com.lightstreamer.client.LightstreamerClient) {}
+        override fun onListenEnd() {}
 
-        override fun onListenStart(client: com.lightstreamer.client.LightstreamerClient) {
-            this.onStatusChange(client.status)
+        override fun onListenStart() {
         }
 
         override fun onPropertyChange(arg0: String) {}

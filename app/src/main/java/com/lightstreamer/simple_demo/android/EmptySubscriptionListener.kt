@@ -23,7 +23,7 @@ import com.lightstreamer.client.SubscriptionListener
  * Empty SubscriptionListener
  */
 object EmptySubscriptionListener : SubscriptionListener {
-    override fun onListenEnd(p0: Subscription) = Unit
+    override fun onListenEnd() = Unit
 
     override fun onItemUpdate(p0: ItemUpdate) = Unit
 
@@ -43,7 +43,7 @@ object EmptySubscriptionListener : SubscriptionListener {
 
     override fun onCommandSecondLevelItemLostUpdates(p0: Int, p1: String) = Unit
 
-    override fun onListenStart(p0: Subscription) = Unit
+    override fun onListenStart() = Unit
 
     override fun onRealMaxFrequency(p0: String?) = Unit
 }

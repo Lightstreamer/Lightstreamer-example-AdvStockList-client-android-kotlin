@@ -120,6 +120,7 @@ class DetailsFragment : Fragment() {
                 requestedSnapshot = "yes"
 
                 addListener(LogSubscriptionListener)
+                stockListener.setSubscription(this)
                 addListener(stockListener)
                 addListener(chart)
                 subscriptionHandling.setSubscription(this)
