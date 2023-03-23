@@ -57,7 +57,7 @@ class StockListDemo : AppCompatActivity(), StocksFragment.onStockSelectedListene
         supportActionBar?.setTitle(R.string.lightstreamer)
         setContentView(R.layout.stocks)
 
-        if (findViewById<TextView>(R.id.fragment_container) != null) {
+        if (findViewById(R.id.fragment_container) != null) {
             //single fragment view (phone)
             if (savedInstanceState != null) {
                 return
@@ -101,7 +101,7 @@ class StockListDemo : AppCompatActivity(), StocksFragment.onStockSelectedListene
         isConnectionExpected = client.start(false)
 
         var openItem = intentItem
-        if (openItem == 0 && findViewById<TextView>(R.id.fragment_container) == null) {
+        if (openItem == 0 && findViewById(R.id.fragment_container) == null) {
             //tablet, always start with an open stock
             val df = detailsFragment
             if (df != null) {
@@ -209,8 +209,8 @@ class StockListDemo : AppCompatActivity(), StocksFragment.onStockSelectedListene
     private inner class StatusChange(private val status: String) : Runnable {
 
         private fun applyStatus(statusId: Int, textId: Int) {
-            val statusIcon = findViewById<ImageView>(R.id.status_image) as ImageView
-            val textStatus = findViewById<TextView>(R.id.text_status) as TextView
+            val statusIcon = findViewById(R.id.status_image) as ImageView
+            val textStatus = findViewById(R.id.text_status) as TextView
 
             statusIcon.contentDescription = resources.getString(textId)
             statusIcon.setImageResource(statusId)
@@ -263,7 +263,7 @@ class StockListDemo : AppCompatActivity(), StocksFragment.onStockSelectedListene
 
         override fun onDoubleTap(e: MotionEvent): Boolean {
             //toggleContainer.setVisibility(show ? View.VISIBLE : View.GONE);
-            val textStatus = findViewById<TextView>(R.id.text_status) as TextView
+            val textStatus = findViewById(R.id.text_status) as TextView
             textStatus.visibility = if (textStatus.visibility == View.VISIBLE) View.GONE else View.VISIBLE
 
             return true

@@ -40,20 +40,20 @@ class Chart(private val dynamicPlot: XYPlot, private val handler: Handler) : Sub
     init {
         this.series = Series()
 
-        dynamicPlot.setDomainStep(XYStepMode.SUBDIVIDE, 4.0)
-        dynamicPlot.setRangeStep(XYStepMode.SUBDIVIDE, 5.0)
-        dynamicPlot.legendWidget.isVisible = false
+        dynamicPlot.setDomainStep(StepMode.SUBDIVIDE, 4.0)
+        dynamicPlot.setRangeStep(StepMode.SUBDIVIDE, 5.0)
+        dynamicPlot.legend.isVisible = false
 
         dynamicPlot.backgroundPaint.color = Color.BLACK
-        dynamicPlot.graphWidget.backgroundPaint.color = Color.BLACK
-        dynamicPlot.graphWidget.gridBackgroundPaint.color = Color.BLACK
+        dynamicPlot.graph.backgroundPaint.color = Color.BLACK
+        dynamicPlot.graph.gridBackgroundPaint.color = Color.BLACK
 
-        dynamicPlot.graphWidget.domainLabelPaint.color = Color.WHITE
-        dynamicPlot.graphWidget.rangeLabelPaint.color = Color.WHITE
+        dynamicPlot.graph.getLineLabelStyle(XYGraphWidget.Edge.LEFT).paint.color = Color.WHITE
+        dynamicPlot.graph.getLineLabelStyle(XYGraphWidget.Edge.BOTTOM).paint.color = Color.WHITE
 
         dynamicPlot.setRangeBoundaries(minY, maxY, BoundaryMode.FIXED)
 
-        dynamicPlot.domainValueFormat = FormatDateLabel()
+        dynamicPlot.graph.getLineLabelStyle(XYGraphWidget.Edge.BOTTOM).format = FormatDateLabel()
     }
 
     fun onResume(context: Context) {
