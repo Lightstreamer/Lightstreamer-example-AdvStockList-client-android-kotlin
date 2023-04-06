@@ -44,7 +44,7 @@ dependencies {
     implementation "org.jetbrains.kotlin:kotlin-stdlib:$kotlin_version"
     implementation 'com.android.support:appcompat-v7:23.2.1'
     implementation 'com.androidplot:androidplot-core:1.0.0'
-    implementation 'com.lightstreamer:ls-android-client:5.0.0-beta.1'
+    implementation 'com.lightstreamer:ls-android-client:5.0.0-beta.2'
 }
 
 repositories {
