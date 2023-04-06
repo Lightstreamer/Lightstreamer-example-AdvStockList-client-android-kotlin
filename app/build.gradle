@@ -8,8 +8,8 @@ android {
         applicationId "com.lightstreamer.simple_demo.android"
         minSdkVersion 23
         targetSdkVersion 33
-        versionCode 12
-        versionName "2.1.0"
+        versionCode 20
+        versionName "2.2.0"
     }
     /*signingConfigs {
         release {
