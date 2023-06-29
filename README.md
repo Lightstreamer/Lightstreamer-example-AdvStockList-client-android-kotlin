@@ -10,8 +10,6 @@ An extended version, including support for GCM push notifications (Java version)
 ## Live Demo
 
 [![screenshot](screen_android_large.png)](https://play.google.com/store/apps/details?id=com.lightstreamer.simple_demo.android)
- 
-[![tablet screenshot](screen_android_tablet.png)](https://play.google.com/store/apps/details?id=com.lightstreamer.simple_demo.android)
 
 ![QR](qrcode.png)
 
