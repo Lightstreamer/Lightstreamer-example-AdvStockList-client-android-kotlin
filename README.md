@@ -1,7 +1,7 @@
 # Lightstreamer - Stock-List Demo - Android Kotlin Client
 
 
-This project contains a full example of an Android application (Kotlin version) that employs the [Lightstreamer Android Client library](https://lightstreamer.com/api/ls-android-client/latest/) to subscribe to real-time updates.
+This project contains a full example of an Android application (Kotlin version) that employs the [Lightstreamer Android Client library](https://lightstreamer.com/api/ls-android-client/latest/index.html) to subscribe to real-time updates.
 An equivalent version based on Java instead of Kotlin is [available](https://github.com/Lightstreamer/Lightstreamer-example-AdvStockList-client-android) as well.
 
 An extended version, including support for GCM push notifications (Java version) is also available: [Stock-List Demo with GCM Push Notifications - Android Client](https://github.com/Lightstreamer/Lightstreamer-example-MPNStockList-client-android)
@@ -39,7 +39,7 @@ the `Fragment`. Please note that this class does not actually extend `Fragment`.
 
 Check out the sources for further explanations.
   
-*NOTE: Not all the functionalities of the Lightstreamer Android Java client are exposed by the classes listed above. You can easily expand those functionalities using the [Android Client API](https://lightstreamer.com/api/ls-android-client/latest/) as a reference. If in trouble check out the [specific Lightstreamer forum](http://forums.lightstreamer.com/forumdisplay.php?33-Android-Client-API).*
+*NOTE: Not all the functionalities of the Lightstreamer Android Java client are exposed by the classes listed above. You can easily expand those functionalities using the [Android Client API](https://lightstreamer.com/api/ls-android-client/latest/index.html) as a reference. If in trouble check out the [specific Lightstreamer forum](http://forums.lightstreamer.com/forumdisplay.php?33-Android-Client-API).*
 
 ## Install
 
